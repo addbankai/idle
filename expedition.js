@@ -464,7 +464,7 @@
       totalPower += itemData.power;
       if (itemData.rarity === "Legendary") legendaryCount++;
     });
-    totalPowerDiv.innerText = `Total Power: ${totalPower}`;
+    totalPowerDiv.innerText = `Kingdom Power: ${totalPower}`;
     legendaryDiv.innerText = `Legendary: ${legendaryCount}`;
     if (legendaryCount > 0) {
       legendaryDiv.style.animation = "blinkGold 1s infinite";
@@ -568,7 +568,7 @@
     const hardcoreBtn = document.createElement("button");
     hardcoreBtn.innerText = "Hardcore";
     hardcoreBtn.addEventListener("click", function() {
-      startExpedition("Hardcore", { duration: 3600, lootMin: 2, lootMax: 3 });
+      startExpedition("Hardcore", { duration: 1, lootMin: 2, lootMax: 3 });
     });
     expeditionPopup.appendChild(hardcoreBtn);
 
@@ -576,7 +576,7 @@
     const suicidalBtn = document.createElement("button");
     suicidalBtn.innerText = "Suicidal";
     suicidalBtn.addEventListener("click", function() {
-      startExpedition("Suicidal", { duration: 86400, lootMin: 3, lootMax: 10 });
+      startExpedition("Suicidal", { duration: 1, lootMin: 3, lootMax: 10 });
     });
     expeditionPopup.appendChild(suicidalBtn);
 
